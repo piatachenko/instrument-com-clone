@@ -6,7 +6,6 @@ import LinkElement from "~/components/LinkElement";
 
 export default function HeaderNavbar() {
   const [isFixed, setIsFixed] = useState(true);
-  const [isOverlap, setIsOverlap] = useState(false);
   const prevScrollYRef = useRef(0);
 
   useEffect(() => {
@@ -14,15 +13,12 @@ export default function HeaderNavbar() {
       const currentScrollY = window.scrollY;
       const isScrollingUp = currentScrollY < prevScrollYRef.current;
 
-      if (currentScrollY < 120 && !isFixed || window.scrollY <= 60) {
+      if (currentScrollY < 100 && !isFixed) {
         setIsFixed(true);
-        setIsOverlap(false);
-      } else if (currentScrollY >= 120 && isScrollingUp && !isFixed) {
+      } else if (currentScrollY >= 100 && isScrollingUp && !isFixed) {
         setIsFixed(true);
-        setIsOverlap(true);
-      } else if (currentScrollY >= 120 && !isScrollingUp && isFixed) {
+      } else if (currentScrollY >= 100 && !isScrollingUp && isFixed) {
         setIsFixed(false);
-        setIsOverlap(true);
       }
 
       prevScrollYRef.current = currentScrollY;
@@ -38,13 +34,13 @@ export default function HeaderNavbar() {
   return (
     <>
       <header
-        className={`mr-5 flex w-full items-center justify-between bg-black py-12 pl-14 transition-all duration-700 ${
+        className={`flex w-full items-center justify-between bg-black py-12 pl-14 pr-5 transition-all duration-700 ${
           isFixed ? "fixed" : "fixed -translate-y-[8rem]"
-        } ${isOverlap ? "z-10" : "-z-10"}`}
+        }`}
       >
         <div>
           <Link href="/">
-            <Image src={logo} alt="" width={110} />
+            <Image src={logo} alt="Instrument Logo" width={110} />
           </Link>
         </div>
         <nav>

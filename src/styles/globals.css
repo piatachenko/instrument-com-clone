@@ -4,13 +4,23 @@
 
 @font-face {
   font-family: "Monument Grotesk Mono";
-  src: url("../../public/DINAMO Trial Fonts/ABC Monument Grotesk Mono/ABCMonumentGroteskMono-Regular-Trial.otf");
+  src: url("../../public/fonts/ABCMonumentGroteskMono/ABCMonumentGroteskMono-Regular-Trial.otf");
+}
+
+@font-face {
+  font-family: "Whyte Book";
+  src: url("../../public/fonts/Whyte/Whyte-Book.ttf");
 }
 
 html {
-  font-family: "Monument Grotesk Mono";
+  font-family: "Whyte Book";
 }
 
 body {
   background-color: black;
+  color: white;
+}
+
+* {
+  /* outline: 1px white solid; */
 }

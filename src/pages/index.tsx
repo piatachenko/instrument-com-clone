@@ -1,8 +1,10 @@
 import { type NextPage } from "next";
 import Head from "next/head";
+import Image from "next/image";
 import Link from "next/link";
 import HeaderNavbar from "~/layouts.tsx/HeaderNavbar";
 
+import LinkButton from "~/components/LinkButton";
 import { api } from "~/utils/api";
 
 const Home: NextPage = () => {
@@ -14,14 +16,14 @@ const Home: NextPage = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <HeaderNavbar />
-      <main className="h-[100vh] w-full pt-[21.3rem]">
+      <main className="px-[4%] pt-[18rem]">
         <div>
           <iframe
             src="https://player.vimeo.com/video/796346595?h=8a4686b5aa&amp;controls=0&amp;loop=1&amp;background=1&amp;app_id=122963"
             frameBorder="0"
             allow="autoplay; fullscreen; picture-in-picture"
             allowFullScreen
-            className="h-[87.5vh] w-full"
+            className="h-screen w-full"
             data-ready="true"
           ></iframe>
         </div>
@@ -33,27 +35,52 @@ const Home: NextPage = () => {
           </header>
           <div>
             <div>
-              <div>
-                <div></div>
-                <div>
-                  <p></p>
-                  <button></button>
+              <div className="flex items-center gap-[7%]">
+                <div className="grow basis-[52%]">
+                  <Image
+                    src="/assets/1first.avif"
+                    alt="What We Do"
+                    width={2000}
+                    height={2000}
+                  />
+                </div>
+                <div className="basis-[41%] pl-[2%]">
+                  <div className="m-auto w-[79%]">
+                    <p className="text-[1.625rem]">
+                      As a full-service partner to the world’s most ambitious
+                      companies, we create transformational change through
+                      best-in-class digital products and communications.
+                    </p>
+                    <LinkButton href="/">What we do</LinkButton>
+                  </div>
                 </div>
               </div>
             </div>
             <div>
-              <div>
-                <div></div>
-                <div>
-                  <p></p>
-                  <button></button>
+              <div className="flex flex-row-reverse items-center gap-[7%]">
+                <div className="grow basis-[52%]">
+                  <Image
+                    src="/assets/2second.avif"
+                    alt="What We Do"
+                    width={2000}
+                    height={2000}
+                  />
+                </div>
+                <div className="basis-[41%] pr-[2%]">
+                  <div className="m-auto w-[79%]">
+                    <p className="text-[1.625rem]">
+                      Instrument Named Among World's Most Innovative Companies
+                      in Design
+                    </p>
+                    <LinkButton href="/">Learn more</LinkButton>
+                  </div>
                 </div>
               </div>
             </div>
             <div>
               <div>
                 <p></p>
-                <button></button>
+                {/* <LinkButton href='/'>Click</LinkButton> */}
               </div>
             </div>
             <div>
@@ -82,7 +109,7 @@ const Home: NextPage = () => {
         <div>
           <div>
             <p></p>
-            <button></button>
+            {/* <LinkButton href='/'>Click</LinkButton> */}
           </div>
         </div>
       </main>

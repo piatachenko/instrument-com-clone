@@ -2,7 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import React, { useEffect, useRef, useState } from "react";
 import logo from "~/assets/logo.svg";
-import LinkElement from "~/components/LinkElement";
+import LinkSelectElement from "~/components/LinkSelectElement";
 
 export default function HeaderNavbar() {
   const [isFixed, setIsFixed] = useState(true);
@@ -44,19 +44,19 @@ export default function HeaderNavbar() {
           </Link>
         </div>
         <nav>
-          <LinkElement
+          <LinkSelectElement
             text="What We Do"
             href="https://www.instrument.com/what-we-do"
           />
-          <LinkElement
+          <LinkSelectElement
             text="Who We Are"
             href="https://www.instrument.com/who-we-are"
           />
-          <LinkElement
+          <LinkSelectElement
             text="Being Here"
             href="https://www.instrument.com/being-here"
           />
-          <LinkElement
+          <LinkSelectElement
             text="Careers"
             href="https://www.instrument.com/careers"
           />

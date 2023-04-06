@@ -1,13 +1,13 @@
 import Link from "next/link";
 import React from "react";
 
-interface LinkElementProps {
+interface LinkSelectElementProps {
   text: string;
   href: string;
   current?: boolean;
 }
 
-export default function LinkElement({ text, href, current }: LinkElementProps) {
+export default function LinkSelectElement({ text, href, current }: LinkSelectElementProps) {
   return (
     <>
       <Link

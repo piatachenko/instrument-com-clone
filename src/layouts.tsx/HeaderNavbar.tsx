@@ -34,8 +34,8 @@ export default function HeaderNavbar() {
   return (
     <>
       <header
-        className={`flex w-full items-center justify-between bg-black py-12 pl-14 pr-5 transition-all duration-700 ${
-          isFixed ? "fixed" : "fixed -translate-y-[8rem]"
+        className={`fixed flex w-full items-center justify-between bg-black py-12 pl-14 pr-5 transition-all duration-700 ${
+          isFixed ? "" : "-translate-y-[8rem]"
         }`}
       >
         <div>

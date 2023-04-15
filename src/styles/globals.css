@@ -12,6 +12,11 @@
   src: url("../../public/fonts/Whyte/Whyte-Book.ttf");
 }
 
+@font-face {
+  font-family: "Whyte Medium";
+  src: url("../../public/fonts/Whyte/Whyte-Medium.ttf");
+}
+
 html {
   font-family: "Whyte Book";
 }

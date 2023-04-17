@@ -2,10 +2,10 @@ import { type NextPage } from "next";
 import Head from "next/head";
 import Image from "next/image";
 import Link from "next/link";
-import HeaderNavbar from "~/layouts.tsx/HeaderNavbar";
-
+import ImagesCarousel from "~/components/ImagesCarousel";
 import LinkButton from "~/components/LinkButton";
-import { api } from "~/utils/api";
+import Footer from "~/layouts.tsx/Footer";
+import HeaderNavbar from "~/layouts.tsx/HeaderNavbar";
 
 const Home: NextPage = () => {
   return (
@@ -16,7 +16,7 @@ const Home: NextPage = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <HeaderNavbar />
-      <main className="px-[4%] pt-[18rem]">
+      <main className="px-[4%] pt-[18rem] tracking-tight">
         <div>
           <iframe
             src="https://player.vimeo.com/video/796346595?h=8a4686b5aa&amp;controls=0&amp;loop=1&amp;background=1&amp;app_id=122963"
@@ -28,12 +28,12 @@ const Home: NextPage = () => {
           ></iframe>
         </div>
         <section>
-          <header className="my-60">
+          <header className="mb-56 mt-48">
             <h1 className="mx-auto max-w-4xl text-center text-6xl leading-[4.5rem]">
               We build connected brand systems from vision through execution
             </h1>
           </header>
-          <div>
+          <div className="space-y-56">
             <div>
               <div className="flex items-center gap-[7%]">
                 <div className="grow basis-[52%]">
@@ -45,13 +45,17 @@ const Home: NextPage = () => {
                   />
                 </div>
                 <div className="basis-[41%] pl-[2%]">
-                  <div className="m-auto w-[79%]">
+                  <div className="m-auto max-w-[79%]">
                     <p className="text-[1.625rem]">
                       As a full-service partner to the world’s most ambitious
                       companies, we create transformational change through
                       best-in-class digital products and communications.
                     </p>
-                    <LinkButton href="/">What we do</LinkButton>
+                    <div className="mt-10">
+                      <LinkButton href="https://www.instrument.com/what-we-do">
+                        <span>What we do</span>
+                      </LinkButton>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -67,53 +71,172 @@ const Home: NextPage = () => {
                   />
                 </div>
                 <div className="basis-[41%] pr-[2%]">
-                  <div className="m-auto w-[79%]">
+                  <div className="m-auto max-w-[79%]">
                     <p className="text-[1.625rem]">
                       Instrument Named Among World's Most Innovative Companies
                       in Design
                     </p>
-                    <LinkButton href="/">Learn more</LinkButton>
+                    <div className="mt-10">
+                      <LinkButton href="https://www.instrument.com/articles/instrument-named-among-most-innovative-companies-in-design">
+                        <span>Learn more</span>
+                      </LinkButton>
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
-            <div>
-              <div>
-                <p></p>
-                {/* <LinkButton href='/'>Click</LinkButton> */}
-              </div>
+          </div>
+        </section>
+        <section>
+          <header className="my-60 text-center">
+            <h2 className="mx-auto max-w-2xl text-[3.1875rem] leading-[3.6875rem]">
+              Explore some of our most recent work
+            </h2>
+            <div className="mt-10">
+              <LinkButton href="https://www.instrument.com/work">
+                <span>Our work</span>
+              </LinkButton>
             </div>
-            <div>
-              <div>
-                <div>
-                  <div></div>
-                  <p></p>
-                  <p></p>
-                </div>
-                <div>
-                  <div></div>
-                  <p></p>
-                  <p></p>
-                </div>
+          </header>
+          <div>
+            <div className="flex gap-14">
+              <div className="basis-1/2">
+                <Link href="https://www.instrument.com/work/eames-institute">
+                  <span className="w-full">
+                    <Image
+                      src="/assets/3third.avif"
+                      alt=""
+                      width={2000}
+                      height={2000}
+                    ></Image>
+                  </span>
+                  <span className="block max-w-[31.5rem]">
+                    <span className="mb-3 mt-5 block font-['Whyte_Medium'] text-[1.625rem] leading-[2.4375rem]">
+                      Eames Institute
+                    </span>
+                    <span className="block font-['Monument_Grotesk_Mono'] text-[0.875rem] leading-[1.5rem]">
+                      Ray and Charles Eames laid the foundation for modern
+                      design and created work that has transcended time. With an
+                      aspiration to bring the Eameses’ timeless methodologies to
+                      a modern audience, the Eames Institute enlisted Instrument
+                      to co-create a digital platform to unveil their vast
+                      collection to the world.
+                    </span>
+                  </span>
+                </Link>
               </div>
-            </div>
-            <div>
-              <div>
-                <div></div>
-                <div></div>
-                <div></div>
+              <div className="basis-1/2">
+                <Link href="https://www.instrument.com/work/dropbox-award-submission">
+                  <span className="w-full">
+                    <Image
+                      src="/assets/4fourth.avif"
+                      alt=""
+                      width={2000}
+                      height={2000}
+                    ></Image>
+                  </span>
+                  <span className="block max-w-[31.5rem]">
+                    <span className="mb-3 mt-5 block font-['Whyte_Medium'] text-[1.625rem] leading-[2.4375rem]">
+                      Dropbox "For All Things Worth Saving"
+                    </span>
+                    <span className="block font-['Monument_Grotesk_Mono'] text-[0.875rem] leading-[1.5rem]">
+                      To evolve and mature how Dropbox engages with their
+                      customers, we developed a multi-year brand platform as
+                      well as launched its first campaign titled 'For All Things
+                      Worth Saving' — an ecosystem of branded experiences aimed
+                      to remind people of the inherent value of their digital
+                      files.
+                    </span>
+                  </span>
+                </Link>
               </div>
             </div>
           </div>
         </section>
+        <div className="flex items-center justify-center">
+          <ul className="flex w-full md:w-[60vw] [&>*]:basis-1/3">
+            <li>
+              <ImagesCarousel
+                images={[
+                  "/assets/path.avif",
+                  "/assets/ebay.avif",
+                  "/assets/samsung.avif",
+                  "/assets/nike.avif",
+                  "/assets/intercom.avif",
+                  "/assets/stumptown.avif",
+                  "/assets/yeti.avif",
+                  "/assets/sonos.avif",
+                  "/assets/dropbox-new.avif",
+                ]}
+                duration={2000}
+              />
+            </li>
+            <li>
+              <ImagesCarousel
+                images={[
+                  "/assets/levis.avif",
+                  "/assets/new-knowledge.avif",
+                  "/assets/gopro.avif",
+                  "/assets/youtube.avif",
+                  "/assets/facebook.avif",
+                  "/assets/dwell.avif",
+                  "/assets/one-medical.avif",
+                  "/assets/netflix.avif",
+                  "/assets/xbox.avif",
+                ]}
+                duration={2000}
+                delay={100}
+              />
+            </li>
+            <li>
+              <ImagesCarousel
+                images={[
+                  "/assets/tumblr.avif",
+                  "/assets/airbnb.avif",
+                  "/assets/specialized.avif",
+                  "/assets/spotify.avif",
+                  "/assets/mercy-corps.avif",
+                  "/assets/umpqua.avif",
+                  "/assets/linkedin.avif",
+                  "/assets/patagonia.avif",
+                  "/assets/google.avif",
+                ]}
+                duration={2000}
+                delay={200}
+              />
+            </li>
+          </ul>
+        </div>
         <div>
-          <div>
-            <p></p>
-            {/* <LinkButton href='/'>Click</LinkButton> */}
+          <div className="mt-7 text-center">
+            <p className="mx-auto max-w-4xl text-[3.9375rem] leading-[4.625rem]">
+              We’d love to work with you and your team
+            </p>
+            <div className="mt-10">
+              <LinkButton href="https://www.instrument.com/contact">
+                <span>Get in touch</span>
+              </LinkButton>
+            </div>
           </div>
         </div>
       </main>
-      <footer></footer>
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <Footer />
     </>
   );
 };

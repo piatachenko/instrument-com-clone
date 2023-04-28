@@ -2,6 +2,7 @@ import { type NextPage } from "next";
 import Head from "next/head";
 import Image from "next/image";
 import Link from "next/link";
+import { CSSProperties } from "react";
 import ImagesCarousel from "~/components/ImagesCarousel";
 import LinkButton from "~/components/LinkButton";
 import Footer from "~/layouts.tsx/Footer";
@@ -16,26 +17,35 @@ const Home: NextPage = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <HeaderNavbar />
-      <main className="px-[4%] pt-[18rem] tracking-tight">
-        <div>
-          <iframe
-            src="https://player.vimeo.com/video/796346595?h=8a4686b5aa&amp;controls=0&amp;loop=1&amp;background=1&amp;app_id=122963"
-            frameBorder="0"
-            allow="autoplay; fullscreen; picture-in-picture"
-            allowFullScreen
-            className="h-screen w-full"
-            data-ready="true"
-          ></iframe>
+      <main className="px-[4%] pt-[115.25px] tracking-tight">
+        <div className="mt-[15rem] max-md:-mx-[5%]">
+          <div className="relative mt-[12%] pt-[56.25%]">
+            <iframe
+              src="https://player.vimeo.com/video/796346595?h=8a4686b5aa&amp;controls=0&amp;loop=1&amp;background=1&amp;app_id=122963"
+              frameBorder="0"
+              allow="autoplay; fullscreen; picture-in-picture"
+              allowFullScreen
+              className="absolute left-0 top-0 h-full w-full"
+              data-ready="true"
+            ></iframe>
+          </div>
         </div>
         <section>
-          <header className="mb-56 mt-48">
-            <h1 className="mx-auto max-w-4xl text-center text-6xl leading-[4.5rem]">
+          <header className="mx-auto mb-56 mt-48 max-w-[84%] xs:text-center md:max-w-[76%] lg:max-w-[68%] 2xl:max-w-[60%]">
+            <h1
+              className="leading-[120%]"
+              style={
+                {
+                  "font-size": "calc(28px + 68*(100vw - 320px)/ 2180)",
+                } as CSSProperties
+              }
+            >
               We build connected brand systems from vision through execution
             </h1>
           </header>
-          <div className="space-y-56">
+          <div className="space-y-56 max-lg:mx-[4%]">
             <div>
-              <div className="flex items-center gap-[7%]">
+              <div className="flex flex-col items-center gap-10 lg:flex-row lg:gap-[7%]">
                 <div className="grow basis-[52%]">
                   <Image
                     src="/assets/1first.avif"
@@ -46,12 +56,18 @@ const Home: NextPage = () => {
                 </div>
                 <div className="basis-[41%] pl-[2%]">
                   <div className="m-auto max-w-[79%]">
-                    <p className="text-[1.625rem]">
-                      As a full-service partner to the world’s most ambitious
-                      companies, we create transformational change through
-                      best-in-class digital products and communications.
+                    <p
+                      style={
+                        {
+                          "font-size": "calc(19px + 13*(100vw - 320px)/2180)",
+                        } as CSSProperties
+                      }
+                    >
+                      As a full-service partner to the world&apos;s most
+                      ambitious companies, we create transformational change
+                      through best-in-class digital products and communications.
                     </p>
-                    <div className="mt-10">
+                    <div className="mt-7 lg:mt-10">
                       <LinkButton href="https://www.instrument.com/what-we-do">
                         <span>What we do</span>
                       </LinkButton>
@@ -61,7 +77,7 @@ const Home: NextPage = () => {
               </div>
             </div>
             <div>
-              <div className="flex flex-row-reverse items-center gap-[7%]">
+              <div className="flex flex-col items-center gap-10 lg:flex-row-reverse lg:gap-[7%]">
                 <div className="grow basis-[52%]">
                   <Image
                     src="/assets/2second.avif"
@@ -72,11 +88,17 @@ const Home: NextPage = () => {
                 </div>
                 <div className="basis-[41%] pr-[2%]">
                   <div className="m-auto max-w-[79%]">
-                    <p className="text-[1.625rem]">
+                    <p
+                      style={
+                        {
+                          "font-size": "calc(19px + 13*(100vw - 320px)/2180)",
+                        } as CSSProperties
+                      }
+                    >
                       Instrument Named Among World's Most Innovative Companies
                       in Design
                     </p>
-                    <div className="mt-10">
+                    <div className="mt-7 lg:mt-10">
                       <LinkButton href="https://www.instrument.com/articles/instrument-named-among-most-innovative-companies-in-design">
                         <span>Learn more</span>
                       </LinkButton>
@@ -88,18 +110,25 @@ const Home: NextPage = () => {
           </div>
         </section>
         <section>
-          <header className="my-60 text-center">
-            <h2 className="mx-auto max-w-2xl text-[3.1875rem] leading-[3.6875rem]">
+          <header className="mx-auto my-60 max-w-[84%] xs:text-center md:max-w-[76%] lg:max-w-[68%] 2xl:max-w-[60%]">
+            <h2
+              className="leading-[100%]"
+              style={
+                {
+                  "font-size": "calc(28px + 68*(100vw - 320px)/ 2180)",
+                } as CSSProperties
+              }
+            >
               Explore some of our most recent work
             </h2>
-            <div className="mt-10">
+            <div className="mt-7 xs:mt-10">
               <LinkButton href="https://www.instrument.com/work">
                 <span>Our work</span>
               </LinkButton>
             </div>
           </header>
           <div>
-            <div className="flex gap-14">
+            <div className="flex gap-14 max-lg:flex-col max-lg:gap-24 max-md:mx-[-5%]">
               <div className="basis-1/2">
                 <Link href="https://www.instrument.com/work/eames-institute">
                   <span className="w-full">
@@ -110,17 +139,24 @@ const Home: NextPage = () => {
                       height={2000}
                     ></Image>
                   </span>
-                  <span className="block max-w-[31.5rem]">
-                    <span className="mb-3 mt-5 block font-['Whyte_Medium'] text-[1.625rem] leading-[2.4375rem]">
+                  <span className="block gap-10 max-md:mx-[9%] max-md:max-w-[31.5rem] max-lg:md:flex lg:max-w-[31.5rem] [&>*]:basis-1/2">
+                    <span
+                      className="mt-5 block font-['Whyte_Medium'] leading-[125%]"
+                      style={
+                        {
+                          "font-size": "calc(19px + 13*(100vw - 320px)/ 2180)",
+                        } as CSSProperties
+                      }
+                    >
                       Eames Institute
                     </span>
-                    <span className="block font-['Monument_Grotesk_Mono'] text-[0.875rem] leading-[1.5rem]">
+                    <span className="mt-3 block font-['Monument_Grotesk_Mono'] text-[0.875rem] leading-[1.5rem] md:max-lg:mt-5">
                       Ray and Charles Eames laid the foundation for modern
                       design and created work that has transcended time. With an
-                      aspiration to bring the Eameses’ timeless methodologies to
-                      a modern audience, the Eames Institute enlisted Instrument
-                      to co-create a digital platform to unveil their vast
-                      collection to the world.
+                      aspiration to bring the Eameses&apos; timeless
+                      methodologies to a modern audience, the Eames Institute
+                      enlisted Instrument to co-create a digital platform to
+                      unveil their vast collection to the world.
                     </span>
                   </span>
                 </Link>
@@ -135,11 +171,18 @@ const Home: NextPage = () => {
                       height={2000}
                     ></Image>
                   </span>
-                  <span className="block max-w-[31.5rem]">
-                    <span className="mb-3 mt-5 block font-['Whyte_Medium'] text-[1.625rem] leading-[2.4375rem]">
+                  <span className="block gap-10 max-md:mx-[9%] max-md:max-w-[31.5rem] max-lg:md:flex lg:max-w-[31.5rem] [&>*]:basis-1/2">
+                    <span
+                      className="mt-5 block font-['Whyte_Medium'] leading-[125%]"
+                      style={
+                        {
+                          "font-size": "calc(19px + 13*(100vw - 320px)/ 2180)",
+                        } as CSSProperties
+                      }
+                    >
                       Dropbox "For All Things Worth Saving"
                     </span>
-                    <span className="block font-['Monument_Grotesk_Mono'] text-[0.875rem] leading-[1.5rem]">
+                    <span className="mt-3 block font-['Monument_Grotesk_Mono'] text-[0.875rem] leading-[1.5rem] md:max-lg:mt-5">
                       To evolve and mature how Dropbox engages with their
                       customers, we developed a multi-year brand platform as
                       well as launched its first campaign titled 'For All Things
@@ -154,7 +197,7 @@ const Home: NextPage = () => {
           </div>
         </section>
         <div className="flex items-center justify-center">
-          <ul className="flex w-full md:w-[60vw] [&>*]:basis-1/3">
+          <ul className="-px-[4%] flex w-full md:w-[60vw] [&>*]:basis-1/3">
             <li>
               <ImagesCarousel
                 images={[
@@ -208,11 +251,18 @@ const Home: NextPage = () => {
           </ul>
         </div>
         <div>
-          <div className="mt-7 text-center">
-            <p className="mx-auto max-w-4xl text-[3.9375rem] leading-[4.625rem]">
-              We’d love to work with you and your team
+          <div className="mx-auto mb-[5%] mt-7 max-w-[84%] pb-[10rem] xs:text-center md:max-w-[76%] lg:max-w-[68%] 2xl:max-w-[60%]">
+            <p
+              className="leading-[100%]"
+              style={
+                {
+                  "font-size": "calc(28px + 68*(100vw - 320px)/ 2180)",
+                } as CSSProperties
+              }
+            >
+              We&apos;d love to work with you and your team
             </p>
-            <div className="mt-10">
+            <div className="mt-7 xs:mt-10">
               <LinkButton href="https://www.instrument.com/contact">
                 <span>Get in touch</span>
               </LinkButton>
@@ -220,22 +270,6 @@ const Home: NextPage = () => {
           </div>
         </div>
       </main>
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
       <Footer />
     </>
   );

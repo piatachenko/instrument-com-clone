@@ -4,7 +4,7 @@ import LinkSelectElement from "~/components/LinkSelectElement";
 export default function FooterNavbar() {
   return (
     <>
-      <ul className="flex h-[15.5rem] flex-col flex-wrap [&>*]:basis-1/5 [&>*]:mr-16">
+      <ul className="flex xs:h-[15.5rem] max-xs:gap-6 flex-col flex-wrap xs:[&>*]:basis-1/5 xs:[&>*]:mr-16">
         <li>
           <LinkSelectElement text={"Home"} href={"https://www.instrument.com/"} current />
         </li>

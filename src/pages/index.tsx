@@ -139,7 +139,7 @@ const Home: NextPage = () => {
                       height={2000}
                     ></Image>
                   </span>
-                  <span className="block gap-10 max-md:mx-[9%] max-md:max-w-[31.5rem] max-lg:md:flex lg:max-w-[31.5rem] [&>*]:basis-1/2">
+                  <span className="block gap-10 max-md:mx-[9%] max-md:max-w-[31.5rem] max-lg:md:flex max-3xl:lg:max-w-[31.5rem] 3xl:flex [&>*]:basis-1/2">
                     <span
                       className="mt-5 block font-['Whyte_Medium'] leading-[125%]"
                       style={
@@ -150,7 +150,7 @@ const Home: NextPage = () => {
                     >
                       Eames Institute
                     </span>
-                    <span className="mt-3 block font-['Monument_Grotesk_Mono'] text-[0.875rem] leading-[1.5rem] md:max-lg:mt-5">
+                    <span className="mt-3 block font-['Monument_Grotesk_Mono'] text-[0.875rem] leading-[1.5rem] md:max-lg:mt-5 3xl:mt-5">
                       Ray and Charles Eames laid the foundation for modern
                       design and created work that has transcended time. With an
                       aspiration to bring the Eameses&apos; timeless
@@ -171,7 +171,7 @@ const Home: NextPage = () => {
                       height={2000}
                     ></Image>
                   </span>
-                  <span className="block gap-10 max-md:mx-[9%] max-md:max-w-[31.5rem] max-lg:md:flex lg:max-w-[31.5rem] [&>*]:basis-1/2">
+                  <span className="block gap-10 max-md:mx-[9%] max-md:max-w-[31.5rem] max-lg:md:flex max-3xl:lg:max-w-[31.5rem] 3xl:flex [&>*]:basis-1/2">
                     <span
                       className="mt-5 block font-['Whyte_Medium'] leading-[125%]"
                       style={
@@ -182,7 +182,7 @@ const Home: NextPage = () => {
                     >
                       Dropbox "For All Things Worth Saving"
                     </span>
-                    <span className="mt-3 block font-['Monument_Grotesk_Mono'] text-[0.875rem] leading-[1.5rem] md:max-lg:mt-5">
+                    <span className="mt-3 block font-['Monument_Grotesk_Mono'] text-[0.875rem] leading-[1.5rem] md:max-lg:mt-5 3xl:mt-5">
                       To evolve and mature how Dropbox engages with their
                       customers, we developed a multi-year brand platform as
                       well as launched its first campaign titled 'For All Things

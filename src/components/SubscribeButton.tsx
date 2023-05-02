@@ -3,12 +3,14 @@ interface SubscribeButtonProps {
   isEmailValid: boolean;
 }
 
-export default function SubscribeButton({isSubscribed, isEmailValid}: SubscribeButtonProps) {
+export default function SubscribeButton({
+  isSubscribed,
+  isEmailValid,
+}: SubscribeButtonProps) {
   return (
     <>
       <button
-        type="submit"
-        className={`flex items-center justify-center gap-3.5 rounded-full border border-white/25 px-8 py-4 font-['Monument_Grotesk_Mono'] text-[.9rem] transition-all duration-200 ${
+        className={`inline-flex items-center justify-center gap-3.5 rounded-full border border-white/25 px-[1.6rem] pb-[.7rem] pt-[.8rem] font-['Monument_Grotesk_Mono'] text-xs xs:text-sm sm:text-[.9rem] transition-all duration-200 lg:px-8 lg:pb-[1rem] lg:pt-[1.1rem] ${
           isEmailValid
             ? "bg-white fill-black text-black hover:opacity-75 focus:opacity-50 active:opacity-100"
             : "bg-transparent fill-white text-white hover:opacity-100 focus:opacity-100 active:opacity-100"

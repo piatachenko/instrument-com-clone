@@ -17,9 +17,9 @@ const Home: NextPage = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <HeaderNavbar />
-      <main className="px-[4%] pt-[115.25px] tracking-tight">
-        <div className="mt-[15rem] max-md:-mx-[5%]">
-          <div className="relative mt-[12%] pt-[56.25%]">
+      <main className="px-[4%] pt-[115.25px] tracking-tight 3xl:px-[6%]">
+        <div className="mt-[1.5rem] xs:mt-[11.5rem] sm:mt-[12rem] md:mt-[13rem] xl:mt-[14rem] 2xl:mt-[15rem] max-md:-mx-[5%]">
+          <div className="relative pt-[56.25%]">
             <iframe
               src="https://player.vimeo.com/video/796346595?h=8a4686b5aa&amp;controls=0&amp;loop=1&amp;background=1&amp;app_id=122963"
               frameBorder="0"
@@ -31,7 +31,7 @@ const Home: NextPage = () => {
           </div>
         </div>
         <section>
-          <header className="mx-auto mb-56 mt-48 max-w-[84%] xs:text-center md:max-w-[76%] lg:max-w-[68%] 2xl:max-w-[60%]">
+          <header className="mt-20 mb-[3.7rem] mx-auto xs:mb-56 xs:mt-48 max-w-[92%] xs:max-w-[84%] xs:text-center md:max-w-[76%] lg:max-w-[68%] 2xl:max-w-[60%] 3xl:pb-9 3xl:pt-14">
             <h1
               className="leading-[120%]"
               style={
@@ -43,10 +43,10 @@ const Home: NextPage = () => {
               We build connected brand systems from vision through execution
             </h1>
           </header>
-          <div className="space-y-56 max-lg:mx-[4%]">
+          <div className="space-y-24 xs:space-y-56 max-lg:mx-[4%]">
             <div>
               <div className="flex flex-col items-center gap-10 lg:flex-row lg:gap-[7%]">
-                <div className="grow basis-[52%]">
+                <div className="grow basis-[52%] 3xl:p-10">
                   <Image
                     src="/assets/1first.avif"
                     alt="What We Do"
@@ -55,7 +55,7 @@ const Home: NextPage = () => {
                   />
                 </div>
                 <div className="basis-[41%] pl-[2%]">
-                  <div className="m-auto max-w-[79%]">
+                  <div className="m-auto xs:max-w-[79%]">
                     <p
                       style={
                         {
@@ -67,7 +67,7 @@ const Home: NextPage = () => {
                       ambitious companies, we create transformational change
                       through best-in-class digital products and communications.
                     </p>
-                    <div className="mt-7 lg:mt-10">
+                    <div className="mt-10 xs:mt-7 lg:mt-10">
                       <LinkButton href="https://www.instrument.com/what-we-do">
                         <span>What we do</span>
                       </LinkButton>
@@ -78,7 +78,7 @@ const Home: NextPage = () => {
             </div>
             <div>
               <div className="flex flex-col items-center gap-10 lg:flex-row-reverse lg:gap-[7%]">
-                <div className="grow basis-[52%]">
+                <div className="grow basis-[52%] 3xl:p-10">
                   <Image
                     src="/assets/2second.avif"
                     alt="What We Do"
@@ -87,7 +87,7 @@ const Home: NextPage = () => {
                   />
                 </div>
                 <div className="basis-[41%] pr-[2%]">
-                  <div className="m-auto max-w-[79%]">
+                  <div className="m-auto xs:max-w-[79%]">
                     <p
                       style={
                         {
@@ -98,7 +98,7 @@ const Home: NextPage = () => {
                       Instrument Named Among World's Most Innovative Companies
                       in Design
                     </p>
-                    <div className="mt-7 lg:mt-10">
+                    <div className="mt-10 xs:mt-7 lg:mt-10">
                       <LinkButton href="https://www.instrument.com/articles/instrument-named-among-most-innovative-companies-in-design">
                         <span>Learn more</span>
                       </LinkButton>
@@ -110,7 +110,7 @@ const Home: NextPage = () => {
           </div>
         </section>
         <section>
-          <header className="mx-auto my-60 max-w-[84%] xs:text-center md:max-w-[76%] lg:max-w-[68%] 2xl:max-w-[60%]">
+          <header className="mx-auto mt-32 mb-44 xs:my-60 max-w-[92%] xs:max-w-[84%] xs:text-center md:max-w-[76%] lg:max-w-[68%] 2xl:max-w-[60%] 3xl:pb-9 3xl:pt-14">
             <h2
               className="leading-[100%]"
               style={
@@ -128,7 +128,7 @@ const Home: NextPage = () => {
             </div>
           </header>
           <div>
-            <div className="flex gap-14 max-lg:flex-col max-lg:gap-24 max-md:mx-[-5%]">
+            <div className="flex gap-16 max-lg:flex-col max-lg:gap-24 max-md:mx-[-5%] 3xl:gap-[5%]">
               <div className="basis-1/2">
                 <Link href="https://www.instrument.com/work/eames-institute">
                   <span className="w-full">
@@ -150,7 +150,7 @@ const Home: NextPage = () => {
                     >
                       Eames Institute
                     </span>
-                    <span className="mt-3 block font-['Monument_Grotesk_Mono'] text-[0.875rem] leading-[1.5rem] md:max-lg:mt-5 3xl:mt-5">
+                    <span className="mt-3 block pr-1 font-['Monument_Grotesk_Mono'] text-[0.875rem] leading-[1.5rem] md:max-lg:mt-5 3xl:mt-5">
                       Ray and Charles Eames laid the foundation for modern
                       design and created work that has transcended time. With an
                       aspiration to bring the Eameses&apos; timeless
@@ -182,7 +182,7 @@ const Home: NextPage = () => {
                     >
                       Dropbox "For All Things Worth Saving"
                     </span>
-                    <span className="mt-3 block font-['Monument_Grotesk_Mono'] text-[0.875rem] leading-[1.5rem] md:max-lg:mt-5 3xl:mt-5">
+                    <span className="mt-3 block pr-1 font-['Monument_Grotesk_Mono'] text-[0.875rem] leading-[1.5rem] md:max-lg:mt-5 3xl:mt-5">
                       To evolve and mature how Dropbox engages with their
                       customers, we developed a multi-year brand platform as
                       well as launched its first campaign titled 'For All Things
@@ -251,7 +251,7 @@ const Home: NextPage = () => {
           </ul>
         </div>
         <div>
-          <div className="mx-auto mb-[5%] mt-7 max-w-[84%] pb-[10rem] xs:text-center md:max-w-[76%] lg:max-w-[68%] 2xl:max-w-[60%]">
+          <div className="mx-auto mb-[5%] mt-7 max-w-[92%] xs:max-w-[84%] pb-[10rem] xs:text-center md:max-w-[76%] lg:max-w-[68%] 2xl:max-w-[60%]">
             <p
               className="leading-[100%]"
               style={

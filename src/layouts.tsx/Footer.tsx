@@ -7,7 +7,7 @@ export default function Footer() {
   return (
     <>
       <footer className="relative px-[8%] md:px-[4%]">
-        <div className="-mx-8 items-end justify-between pb-7 md:flex">
+        <div className="-mx-8 items-end justify-between pb-10 xs:pb-7 md:flex">
           <FooterNavbar />
           <div className="pb-2 pr-10 max-md:mb-5 xs:max-md:mt-20 max-xs:mt-5">
             <div className="flex flex-col items-start gap-[1.5rem] fill-white xs:flex-row xs:items-center md:flex-col lg:flex-row lg:gap-[3.25rem]">

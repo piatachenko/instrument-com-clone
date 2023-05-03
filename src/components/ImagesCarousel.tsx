@@ -27,7 +27,7 @@ export default function ImagesCarousel({
 
   return (
     <>
-      <ul className="relative min-h-[45rem] w-full">
+      <ul className="relative min-h-[40vw] my-14 3xl:my-10 w-full">
         {Array.from(images.keys()).map((i) => (
           <li className="absolute bottom-1/2 right-1/2 w-full translate-x-1/2 translate-y-1/2">
             <Image

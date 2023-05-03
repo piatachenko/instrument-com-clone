@@ -11,7 +11,7 @@ export default function LinkButton({ href, children }: LinkButtonProps) {
     <>
       <Link
         href={href}
-        className="inline-block rounded-full bg-white px-[1.6rem] pb-[.7rem] pt-[.8rem] font-['Monument_Grotesk_Mono'] text-xs xs:text-sm text-black transition-all duration-300 hover:brightness-[.7] lg:px-8 lg:pb-[1rem] lg:pt-[1.1rem] "
+        className="inline-block rounded-full bg-white px-[1.6rem] pb-[.7rem] pt-[.8rem] font-['Monument_Grotesk_Mono'] text-sm text-black transition-all duration-300 hover:brightness-[.7] lg:px-8 lg:pb-[1rem] lg:pt-[1.1rem] "
       >
         <span className="flex items-center gap-3">
           {children}

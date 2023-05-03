@@ -119,6 +119,27 @@ const Home: NextPage = () => {
           rel="canonical"
           href="https://www.instrument.com/"
         />
+        <link
+          rel="preload"
+          href="/fonts/ABCMonumentGroteskMono/ABCMonumentGroteskMono-Regular-Trial.otf"
+          as="font"
+          type="font/otf"
+          crossOrigin=""
+        />
+        <link
+          rel="preload"
+          href="/fonts/Whyte/Whyte-Book.ttf"
+          as="font"
+          type="font/ttf"
+          crossOrigin=""
+        />
+        <link
+          rel="preload"
+          href="/fonts/Whyte/Whyte-Medium.ttf"
+          as="font"
+          type="font/ttf"
+          crossOrigin=""
+        />
       </Head>
       <HeaderNavbar />
       <main className="px-[4%] pt-[115.25px] tracking-tight 3xl:px-[6%]">

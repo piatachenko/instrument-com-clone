@@ -36,7 +36,7 @@ export default function ImagesCarousel({
                   ? "translate-y-0 opacity-100"
                   : "-translate-y-5 opacity-0"
               }`}
-              style={{ "--delay": `${delay}ms` } as CSSProperties}
+              style={{ "--delay": `${delay ?? 0}ms` } as CSSProperties}
               alt=""
               width={2000}
               height={2000}

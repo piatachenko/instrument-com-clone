@@ -1,13 +1,17 @@
-export default function NewsletterButton({setIsFormVisible}: any) {
+interface NewsletterButtonProps {
+  isFormVisible?: boolean;
+  setIsFormVisible: (isFormVisible: boolean) => void;
+}
+export default function NewsletterButton({
+  setIsFormVisible,
+}: NewsletterButtonProps) {
   return (
     <>
       <button
         onClick={() => setIsFormVisible(true)}
-        className="flex items-center justify-center gap-3.5 rounded-full max-xs:ml-1 xs:border border-white/25 px-8 py-4 font-['Monument_Grotesk_Mono'] text-[.9rem] uppercase tracking-wide transition-all duration-200 hover:opacity-75 focus:opacity-50 active:opacity-100"
+        className="flex items-center justify-center gap-3.5 rounded-full border-white/25 px-8 py-4 font-['Monument_Grotesk_Mono'] text-[.9rem] uppercase tracking-wide transition-all duration-200 hover:opacity-75 focus:opacity-50 active:opacity-100 max-xs:ml-1 xs:border"
       >
-        <span>
-          Newsletter
-        </span>
+        <span>Newsletter</span>
         <span>
           <svg
             width="9"

@@ -1,3 +1,5 @@
+import { type ChangeEvent } from "react";
+
 interface EmailInputProps {
   setIsEmailValid: (value: boolean) => void;
 }
@@ -5,7 +7,7 @@ interface EmailInputProps {
 export default function EmailInput({ setIsEmailValid }: EmailInputProps) {
   const emailPattern = /^[^\s@]+@[a-zA-Z0-9]+\.[a-zA-Z]{2,}$/;
 
-  function validateEmail(event: any) {
+  function validateEmail(event: ChangeEvent<HTMLInputElement>) {
     setIsEmailValid(emailPattern.test(event.target.value));
   }
 
@@ -15,7 +17,7 @@ export default function EmailInput({ setIsEmailValid }: EmailInputProps) {
         onChange={validateEmail}
         type="text"
         id="enter-email"
-        className="bg-transparent xl:text-center placeholder-white outline-none"
+        className="bg-transparent placeholder-white outline-none xl:text-center"
         placeholder="Enter Email Address..."
       />
     </>

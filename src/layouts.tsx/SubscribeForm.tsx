@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState, type FormEvent } from "react";
 import CloseButton from "~/components/CloseButton";
 import EmailInput from "~/components/EmailInput";
 import NewsletterButton from "~/components/NewsletterButton";
@@ -18,7 +18,7 @@ export default function SubscribeForm() {
     }, 2000);
   }, [isFormVisible]);
 
-  function formSubmit(event: any) {
+  function formSubmit(event: FormEvent) {
     event.preventDefault();
     setIsFormVisible(false);
     setIsSubscribed(true);
@@ -49,7 +49,7 @@ export default function SubscribeForm() {
                 ></path>
               </svg>
             </span>
-            <span className="font-['Monument_Grotesk_Mono'] text-xs xs:text-sm tracking-wider text-neutral-100">
+            <span className="font-['Monument_Grotesk_Mono'] text-xs tracking-wider text-neutral-100 xs:text-sm">
               Join Our Newsletter
             </span>
           </label>
@@ -67,7 +67,7 @@ export default function SubscribeForm() {
                 isSubscribed={isSubscribed}
               />
             </>
-            <div className="right-[4%] top-[8%] md:top-9 md:right-9 inline-flex items-center max-xl:absolute lg:right-10 lg:top-10">
+            <div className="right-[4%] top-[8%] inline-flex items-center max-xl:absolute md:right-9 md:top-9 lg:right-10 lg:top-10">
               <CloseButton onClick={() => setIsFormVisible(false)} />
             </div>
           </div>

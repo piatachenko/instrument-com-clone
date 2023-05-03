@@ -1,9 +1,5 @@
 import Image from "next/image";
-import React, { CSSProperties, useEffect, useState } from "react";
-
-interface CSSCustomProps extends CSSProperties {
-  "--delay": string;
-}
+import React, { useEffect, useState, type CSSProperties } from "react";
 
 interface ImagesCarouselProps {
   images: string[];
@@ -23,13 +19,16 @@ export default function ImagesCarousel({
       setImageIndex((imageIndex) => (imageIndex + 1) % images.length);
     }, duration);
     return () => clearInterval(interval);
-  }, [imageIndex]);
+  }, [imageIndex, duration, images.length]);
 
   return (
     <>
-      <ul className="relative min-h-[40vw] my-14 3xl:my-10 w-full">
+      <ul className="relative my-14 min-h-[40vw] w-full 3xl:my-10">
         {Array.from(images.keys()).map((i) => (
-          <li className="absolute bottom-1/2 right-1/2 w-full translate-x-1/2 translate-y-1/2">
+          <li
+            key={i}
+            className="absolute bottom-1/2 right-1/2 w-full translate-x-1/2 translate-y-1/2"
+          >
             <Image
               src={images[i] ?? ""}
               className={`transition-all delay-[--delay] duration-[.4s] ${
@@ -37,7 +36,7 @@ export default function ImagesCarousel({
                   ? "translate-y-0 opacity-100"
                   : "-translate-y-5 opacity-0"
               }`}
-              style={{ "--delay": `${delay}ms` } as CSSCustomProps}
+              style={{ "--delay": `${delay}ms` } as CSSProperties}
               alt=""
               width={2000}
               height={2000}

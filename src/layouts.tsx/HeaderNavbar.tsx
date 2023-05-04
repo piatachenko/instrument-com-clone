@@ -34,8 +34,12 @@ export default function HeaderNavbar() {
   return (
     <>
       <header
-        className={`fixed z-10 flex w-full items-center justify-between bg-black px-[8%] py-5 transition-tansform duration-700 md:px-[4%] md:py-12 ${
-          isFixed ? "" : isMobileMenuOpen ? "md:-translate-y-[8rem]" : "-translate-y-[8rem]"
+        className={`transition-tansform fixed z-10 flex w-full items-center justify-between bg-black px-[8%] py-5 duration-700 md:px-[4%] md:py-12 ${
+          isFixed
+            ? ""
+            : isMobileMenuOpen
+            ? "md:-translate-y-[8rem]"
+            : "-translate-y-[8rem]"
         }`}
       >
         <div className="z-10">
@@ -43,7 +47,7 @@ export default function HeaderNavbar() {
             <Logo className="w-[110px]" />
           </Link>
         </div>
-        <nav className="-mr-9 max-[860px]:md:[&>*:not(:nth-last-child(1))]:-mr-5 max-md:hidden">
+        <nav className="-mr-9 max-md:hidden max-[860px]:md:[&>*:not(:nth-last-child(1))]:-mr-5">
           <span>
             <LinkSelectElement
               text="What We Do"
@@ -113,7 +117,11 @@ export default function HeaderNavbar() {
             )}
           </button>
         </div>
-        <nav className={`md:hidden fixed inset-0 flex flex-col pb-[15vh] pl-[3%] gap-[1.34rem] justify-end bg-black transition-opacity ${isMobileMenuOpen ? "opacity-100" : "opacity-0 invisible"}`}>
+        <nav
+          className={`fixed inset-0 flex min-h-screen flex-col justify-end gap-[1.34rem] bg-black pb-[15vh] pl-[3%] transition-opacity md:hidden ${
+            isMobileMenuOpen ? "opacity-100" : "invisible opacity-0"
+          }`}
+        >
           <span>
             <LinkSelectElement
               text="What We Do"

@@ -5,6 +5,7 @@ import LinkSelectElement from "~/components/LinkSelectElement";
 
 export default function HeaderNavbar() {
   const [isFixed, setIsFixed] = useState(true);
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const prevScrollYRef = useRef(0);
 
   useEffect(() => {
@@ -33,32 +34,122 @@ export default function HeaderNavbar() {
   return (
     <>
       <header
-        className={`fixed flex w-full items-center justify-between bg-black py-12 px-[4%] transition-all duration-700 z-10 max-md:hidden ${
-          isFixed ? "" : "-translate-y-[8rem]"
+        className={`fixed z-10 flex w-full items-center justify-between bg-black px-[8%] py-5 transition-tansform duration-700 md:px-[4%] md:py-12 ${
+          isFixed ? "" : isMobileMenuOpen ? "md:-translate-y-[8rem]" : "-translate-y-[8rem]"
         }`}
       >
-        <div>
+        <div className="z-10">
           <Link href="/">
             <Logo className="w-[110px]" />
           </Link>
         </div>
-        <nav className="-mr-9">
-          <LinkSelectElement
-            text="What We Do"
-            href="https://www.instrument.com/what-we-do"
-          />
-          <LinkSelectElement
-            text="Who We Are"
-            href="https://www.instrument.com/who-we-are"
-          />
-          <LinkSelectElement
-            text="Being Here"
-            href="https://www.instrument.com/being-here"
-          />
-          <LinkSelectElement
-            text="Careers"
-            href="https://www.instrument.com/careers"
-          />
+        <nav className="-mr-9 max-[860px]:md:[&>*:not(:nth-last-child(1))]:-mr-5 max-md:hidden">
+          <span>
+            <LinkSelectElement
+              text="What We Do"
+              href="https://www.instrument.com/what-we-do"
+            />
+          </span>
+          <span>
+            <LinkSelectElement
+              text="Who We Are"
+              href="https://www.instrument.com/who-we-are"
+            />
+          </span>
+          <span>
+            <LinkSelectElement
+              text="Being Here"
+              href="https://www.instrument.com/being-here"
+            />
+          </span>
+          <span>
+            <LinkSelectElement
+              text="Careers"
+              href="https://www.instrument.com/careers"
+            />
+          </span>
+        </nav>
+        <div className="z-10 flex items-center md:hidden">
+          <button
+            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+            className="p-3"
+          >
+            {isMobileMenuOpen ? (
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                width="100%"
+                height="100%"
+                role="presentation"
+                aria-hidden="true"
+                data-v-a5608aa8=""
+                className="w-5 fill-white"
+              >
+                <title data-v-a5608aa8="">Close Menu</title>
+                <path
+                  className="origin-center scale-[1.3]"
+                  d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"
+                  data-v-a5608aa8=""
+                ></path>
+              </svg>
+            ) : (
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                width="100%"
+                height="100%"
+                role="presentation"
+                aria-hidden="true"
+                data-v-a5608aa8=""
+                className="w-5 fill-white"
+              >
+                <title data-v-a5608aa8="">Open Menu</title>
+                <path
+                  d="M0 0h24v2H0zM0 8h24v2H0zM0 16h24v2H0z"
+                  data-v-a5608aa8=""
+                  className="translate-y-[.185rem]"
+                ></path>
+              </svg>
+            )}
+          </button>
+        </div>
+        <nav className={`md:hidden fixed inset-0 flex flex-col pb-[15vh] pl-[3%] gap-[1.34rem] justify-end bg-black transition-opacity ${isMobileMenuOpen ? "opacity-100" : "opacity-0 invisible"}`}>
+          <span>
+            <LinkSelectElement
+              text="What We Do"
+              href="https://www.instrument.com/what-we-do"
+            />
+          </span>
+          <span>
+            <LinkSelectElement
+              text="Work"
+              href="https://www.instrument.com/work"
+            />
+          </span>
+          <span>
+            <LinkSelectElement
+              text="Who We Are"
+              href="https://www.instrument.com/who-we-are"
+            />
+          </span>
+          <span>
+            <LinkSelectElement
+              text="Being Here"
+              href="https://www.instrument.com/being-here"
+            />
+          </span>
+          <span>
+            <LinkSelectElement
+              text="Careers"
+              href="https://www.instrument.com/careers"
+            />
+          </span>
+          <span>
+            <LinkSelectElement
+              text="Contact"
+              href="https://www.instrument.com/contact"
+            />
+          </span>
         </nav>
       </header>
     </>

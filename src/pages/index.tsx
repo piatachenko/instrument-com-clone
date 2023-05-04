@@ -161,7 +161,7 @@ const Home: NextPage = () => {
               className="leading-[120%]"
               style={
                 {
-                  "font-size": "calc(28px + 68*(100vw - 320px)/ 2180)",
+                  "fontSize": "calc(28px + 68*(100vw - 320px)/ 2180)",
                 } as CSSProperties
               }
             >
@@ -184,7 +184,7 @@ const Home: NextPage = () => {
                     <p
                       style={
                         {
-                          "font-size": "calc(19px + 13*(100vw - 320px)/2180)",
+                          "fontSize": "calc(19px + 13*(100vw - 320px)/2180)",
                         } as CSSProperties
                       }
                     >
@@ -216,7 +216,7 @@ const Home: NextPage = () => {
                     <p
                       style={
                         {
-                          "font-size": "calc(19px + 13*(100vw - 320px)/2180)",
+                          "fontSize": "calc(19px + 13*(100vw - 320px)/2180)",
                         } as CSSProperties
                       }
                     >
@@ -240,7 +240,7 @@ const Home: NextPage = () => {
               className="leading-[100%]"
               style={
                 {
-                  "font-size": "calc(28px + 68*(100vw - 320px)/ 2180)",
+                  "fontSize": "calc(28px + 68*(100vw - 320px)/ 2180)",
                 } as CSSProperties
               }
             >
@@ -269,7 +269,7 @@ const Home: NextPage = () => {
                       className="mt-5 block font-['Whyte_Medium'] leading-[125%]"
                       style={
                         {
-                          "font-size": "calc(19px + 13*(100vw - 320px)/ 2180)",
+                          "fontSize": "calc(19px + 13*(100vw - 320px)/ 2180)",
                         } as CSSProperties
                       }
                     >
@@ -301,7 +301,7 @@ const Home: NextPage = () => {
                       className="mt-5 block font-['Whyte_Medium'] leading-[125%]"
                       style={
                         {
-                          "font-size": "calc(19px + 13*(100vw - 320px)/ 2180)",
+                          "fontSize": "calc(19px + 13*(100vw - 320px)/ 2180)",
                         } as CSSProperties
                       }
                     >
@@ -381,7 +381,7 @@ const Home: NextPage = () => {
               className="leading-[100%]"
               style={
                 {
-                  "font-size": "calc(28px + 68*(100vw - 320px)/ 2180)",
+                  "fontSize": "calc(28px + 68*(100vw - 320px)/ 2180)",
                 } as CSSProperties
               }
             >

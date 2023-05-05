@@ -28,11 +28,11 @@ export default function SubscribeForm() {
     <>
       <form
         onSubmit={formSubmit}
-        className={`fixed inset-x-0 bottom-0 z-10 bg-[#111]/90 backdrop-blur-md transition-all duration-300 ${
+        className={`fixed inset-x-0 bottom-0 z-[5] bg-[#111]/90 backdrop-blur-md transition-all duration-300 ${
           isFormVisible ? "translate-y-0" : "translate-y-full"
         } ${isSubscribed ? "delay-[1.7s]" : ""}`}
       >
-        <div className="mx-[6%] flex min-h-[10rem] items-center px-2 max-xl:flex-wrap max-xl:pb-11 max-md:mb-1 max-md:pb-[6%] md:mx-[3%] xl:mx-[4%] xl:justify-between ">
+        <div className="mx-[6%] flex min-h-[10rem] items-center px-2 max-xl:flex-wrap max-xl:pb-11 max-md:mb-1 max-md:pb-[6%] md:mx-[3%] xl:mx-[4%] xl:justify-between">
           <label
             htmlFor="enter-email"
             className="flex items-center gap-5 fill-neutral-100 max-xl:mb-[8%] max-xl:mt-12 max-xl:basis-full max-xl:pb-2 max-md:mb-[16%] max-md:mt-[8%] max-md:pt-1"
@@ -53,7 +53,7 @@ export default function SubscribeForm() {
               Join Our Newsletter
             </span>
           </label>
-          <div className="inline-block min-h-[2rem] max-w-xl border-neutral-600 text-xl max-xl:mr-12 max-xl:flex-auto max-xl:border-b-2 max-xl:pb-0.5 max-md:mb-[5%] max-md:basis-full xs:min-h-[2.25rem] xs:text-2xl sm:min-h-[2.5rem] sm:text-3xl md:text-[2.05rem] xl:text-center xl:text-4xl max-xl:[&_input]:w-full">
+          <div className="inline-block max-w-xl border-neutral-600 text-xl max-xl:mr-12 max-xl:flex-auto max-xl:border-b-2 max-xl:pb-0.5 max-md:mb-[5%] max-md:basis-full xs:text-2xl sm:text-3xl md:text-[2.05rem] xl:text-center xl:text-4xl max-xl:[&_input]:w-full">
             {isSubscribed ? (
               "Thanks for subscribing!"
             ) : (

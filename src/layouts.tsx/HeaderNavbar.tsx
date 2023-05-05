@@ -34,7 +34,7 @@ export default function HeaderNavbar() {
   return (
     <>
       <header
-        className={`transition-tansform fixed z-10 flex w-full items-center justify-between bg-black px-[8%] py-5 duration-700 md:px-[4%] md:py-12 ${
+        className={`transition-tansform fixed z-10 flex w-full items-center justify-between bg-black px-[8%] py-[1.1rem] duration-700 md:px-[4%] md:py-12 ${
           isFixed
             ? ""
             : isMobileMenuOpen
@@ -118,7 +118,7 @@ export default function HeaderNavbar() {
           </button>
         </div>
         <nav
-          className={`fixed inset-0 flex min-h-screen flex-col justify-end gap-[1.34rem] bg-black pb-[15vh] pl-[3%] transition-opacity md:hidden ${
+          className={`fixed inset-0 flex min-h-[105vh] flex-col justify-end gap-[1.34rem] bg-black pb-[25vh] pl-[3%] transition-opacity md:hidden ${
             isMobileMenuOpen ? "opacity-100" : "invisible opacity-0"
           }`}
         >

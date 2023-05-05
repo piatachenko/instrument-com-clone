@@ -53,7 +53,7 @@ export default function SubscribeForm() {
               Join Our Newsletter
             </span>
           </label>
-          <div className="inline-block max-w-xl border-neutral-600 text-xl max-xl:mr-12 max-xl:flex-auto max-xl:border-b-2 max-xl:pb-0.5 max-md:mb-[5%] max-md:basis-full xs:text-2xl sm:text-3xl md:text-[2.05rem] xl:text-center xl:text-4xl max-xl:[&_input]:w-full">
+          <div className="inline-block min-h-[2rem] max-w-xl border-neutral-600 text-xl max-xl:mr-12 max-xl:flex-auto max-xl:border-b-2 max-xl:pb-0.5 max-md:mb-[5%] max-md:basis-full xs:min-h-[2.25rem] xs:text-2xl sm:min-h-[2.5rem] sm:text-3xl md:text-[2.05rem] xl:text-center xl:text-4xl max-xl:[&_input]:w-full">
             {isSubscribed ? (
               "Thanks for subscribing!"
             ) : (

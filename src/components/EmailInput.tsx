@@ -17,7 +17,7 @@ export default function EmailInput({ setIsEmailValid }: EmailInputProps) {
         onChange={validateEmail}
         type="text"
         id="enter-email"
-        className="z-10 bg-transparent placeholder-white outline-none xl:text-center"
+        className="bg-transparent placeholder-white outline-none xl:text-center"
         placeholder="Enter Email Address..."
       />
     </>

@@ -6,7 +6,7 @@ import SubscribeForm from "./SubscribeForm";
 export default function Footer() {
   return (
     <>
-      <footer className="relative px-[8%] md:px-[4%]">
+      <footer className="relative px-[8%] md:px-[4%] overflow-x-hidden">
         <div className="-mx-8 items-end justify-between pb-10 xs:pb-7 md:flex">
           <FooterNavbar />
           <div className="pb-2 pr-10 max-md:mb-5 xs:max-md:mt-20 max-xs:mt-5">

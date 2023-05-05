@@ -142,7 +142,7 @@ const Home: NextPage = () => {
         />
       </Head>
       <HeaderNavbar />
-      <main className="px-[4%] pt-[115.25px] tracking-tight 3xl:px-[6%]">
+      <main className="px-[4%] pt-[115.25px] tracking-tight 3xl:px-[6%] overflow-x-hidden">
         <div className="mt-[1.5rem] max-md:-mx-[5%] xs:mt-[11.5rem] sm:mt-[12rem] md:mt-[13rem] xl:mt-[14rem] 2xl:mt-[15rem]">
           <div className="relative pt-[56.25%]">
             <iframe
@@ -161,7 +161,7 @@ const Home: NextPage = () => {
               className="leading-[120%]"
               style={
                 {
-                  "fontSize": "calc(28px + 68*(100vw - 320px)/ 2180)",
+                  fontSize: "calc(28px + 68*(100vw - 320px)/ 2180)",
                 } as CSSProperties
               }
             >
@@ -184,7 +184,7 @@ const Home: NextPage = () => {
                     <p
                       style={
                         {
-                          "fontSize": "calc(19px + 13*(100vw - 320px)/2180)",
+                          fontSize: "calc(19px + 13*(100vw - 320px)/2180)",
                         } as CSSProperties
                       }
                     >
@@ -216,7 +216,7 @@ const Home: NextPage = () => {
                     <p
                       style={
                         {
-                          "fontSize": "calc(19px + 13*(100vw - 320px)/2180)",
+                          fontSize: "calc(19px + 13*(100vw - 320px)/2180)",
                         } as CSSProperties
                       }
                     >
@@ -240,7 +240,7 @@ const Home: NextPage = () => {
               className="leading-[100%]"
               style={
                 {
-                  "fontSize": "calc(28px + 68*(100vw - 320px)/ 2180)",
+                  fontSize: "calc(28px + 68*(100vw - 320px)/ 2180)",
                 } as CSSProperties
               }
             >
@@ -269,7 +269,7 @@ const Home: NextPage = () => {
                       className="mt-5 block font-['Whyte_Medium'] leading-[125%]"
                       style={
                         {
-                          "fontSize": "calc(19px + 13*(100vw - 320px)/ 2180)",
+                          fontSize: "calc(19px + 13*(100vw - 320px)/ 2180)",
                         } as CSSProperties
                       }
                     >
@@ -301,7 +301,7 @@ const Home: NextPage = () => {
                       className="mt-5 block font-['Whyte_Medium'] leading-[125%]"
                       style={
                         {
-                          "fontSize": "calc(19px + 13*(100vw - 320px)/ 2180)",
+                          fontSize: "calc(19px + 13*(100vw - 320px)/ 2180)",
                         } as CSSProperties
                       }
                     >
@@ -381,7 +381,7 @@ const Home: NextPage = () => {
               className="leading-[100%]"
               style={
                 {
-                  "fontSize": "calc(28px + 68*(100vw - 320px)/ 2180)",
+                  fontSize: "calc(28px + 68*(100vw - 320px)/ 2180)",
                 } as CSSProperties
               }
             >

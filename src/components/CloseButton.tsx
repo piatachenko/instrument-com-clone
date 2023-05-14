@@ -6,14 +6,13 @@ export default function CloseButton({ onClick }: { onClick: () => void }) {
       <button
         onClick={onClick}
         type="button"
-        className="rounded-full border border-white/25 stroke-white/[.85] p-2.5 lg:p-3.5 transition-all duration-200 hover:bg-white/[.85] hover:stroke-black"
+        className="rounded-full border border-white/25 stroke-white/[.85] p-2.5 lg:p-3.5 transition-all duration-200 hover:bg-white hover:stroke-black"
       >
         <svg
           xmlns="http://www.w3.org/2000/svg"
           className="w-5 h-5 xs:w-[1.55rem] xs:h-[1.55rem]"
           viewBox="0 0 24 24"
           fill="none"
-          stroke="currentColor"
           strokeWidth="1.3"
           strokeLinecap="round"
           strokeLinejoin="round"

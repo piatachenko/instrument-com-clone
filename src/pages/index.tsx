@@ -2,9 +2,9 @@ import { type NextPage } from "next";
 import Head from "next/head";
 import Image from "next/image";
 import Link from "next/link";
-import { type CSSProperties } from "react";
 import ImagesCarousel from "~/components/ImagesCarousel";
 import LinkButton from "~/components/LinkButton";
+import Observer from "~/components/Observer";
 import Footer from "~/layouts.tsx/Footer";
 import HeaderNavbar from "~/layouts.tsx/HeaderNavbar";
 
@@ -142,7 +142,7 @@ const Home: NextPage = () => {
         />
       </Head>
       <HeaderNavbar />
-      <main className="px-[4%] pt-[115.25px] tracking-tight 3xl:px-[6%] overflow-x-hidden">
+      <main className="overflow-x-hidden px-[4%] pt-[115.25px] tracking-tight 3xl:px-[6%]">
         <div className="mt-[1.5rem] max-md:-mx-[5%] xs:mt-[11.5rem] sm:mt-[12rem] md:mt-[13rem] xl:mt-[14rem] 2xl:mt-[15rem]">
           <div className="relative pt-[56.25%]">
             <iframe
@@ -156,168 +156,173 @@ const Home: NextPage = () => {
           </div>
         </div>
         <section>
-          <header className="mx-auto mb-[3.7rem] mt-20 max-w-[92%] xs:mb-56 xs:mt-48 xs:max-w-[84%] xs:text-center md:max-w-[76%] lg:max-w-[68%] 2xl:max-w-[60%] 3xl:pb-9 3xl:pt-14">
-            <h1
-              className="leading-[120%]"
-              style={
-                {
+          <Observer>
+            <header className="mx-auto mb-[3.7rem] mt-20 max-w-[92%] opacity-0 transition-opacity duration-[.9s] xs:mb-56 xs:mt-48 xs:max-w-[84%] xs:text-center md:max-w-[76%] lg:max-w-[68%] 2xl:max-w-[60%] 3xl:pb-9 3xl:pt-14">
+              <h1
+                className="leading-[120%]"
+                style={{
                   fontSize: "calc(28px + 68*(100vw - 320px)/ 2180)",
-                } as CSSProperties
-              }
-            >
-              We build connected brand systems from vision through execution
-            </h1>
-          </header>
+                }}
+              >
+                We build connected brand systems from vision through execution
+              </h1>
+            </header>
+          </Observer>
           <div className="space-y-24 max-lg:mx-[4%] xs:space-y-56">
             <div>
               <div className="flex flex-col items-center gap-10 lg:flex-row lg:gap-[7%]">
-                <div className="grow basis-[52%] 3xl:p-10">
-                  <Image
-                    src="/assets/1first.avif"
-                    alt="What We Do"
-                    width={2000}
-                    height={2000}
-                  />
-                </div>
-                <div className="basis-[41%] pl-[2%]">
-                  <div className="m-auto xs:max-w-[79%]">
-                    <p
-                      style={
-                        {
+                <Observer>
+                  <div className="grow basis-[52%] opacity-0 transition-opacity duration-[.9s] 3xl:p-10">
+                    <Image
+                      src="/assets/1first.avif"
+                      alt="What We Do"
+                      width={2000}
+                      height={2000}
+                    />
+                  </div>
+                </Observer>
+                <Observer>
+                  <div className="basis-[41%] pl-[2%] opacity-0 transition-opacity delay-150 duration-[.9s]">
+                    <div className="m-auto xs:max-w-[79%]">
+                      <p
+                        style={{
                           fontSize: "calc(19px + 13*(100vw - 320px)/2180)",
-                        } as CSSProperties
-                      }
-                    >
-                      As a full-service partner to the world&apos;s most
-                      ambitious companies, we create transformational change
-                      through best-in-class digital products and communications.
-                    </p>
-                    <div className="mt-10 xs:mt-7 lg:mt-10">
-                      <LinkButton href="https://www.instrument.com/what-we-do">
-                        <span>What we do</span>
-                      </LinkButton>
+                        }}
+                      >
+                        As a full-service partner to the world&apos;s most
+                        ambitious companies, we create transformational change
+                        through best-in-class digital products and
+                        communications.
+                      </p>
+                      <div className="mt-10 xs:mt-7 lg:mt-10">
+                        <LinkButton href="https://www.instrument.com/what-we-do">
+                          <span>What we do</span>
+                        </LinkButton>
+                      </div>
                     </div>
                   </div>
-                </div>
+                </Observer>
               </div>
             </div>
             <div>
               <div className="flex flex-col items-center gap-10 lg:flex-row-reverse lg:gap-[7%]">
-                <div className="grow basis-[52%] 3xl:p-10">
-                  <Image
-                    src="/assets/2second.avif"
-                    alt="What We Do"
-                    width={2000}
-                    height={2000}
-                  />
-                </div>
-                <div className="basis-[41%] pr-[2%]">
-                  <div className="m-auto xs:max-w-[79%]">
-                    <p
-                      style={
-                        {
+                <Observer>
+                  <div className="grow basis-[52%] opacity-0 transition-opacity duration-[.9s] 3xl:p-10">
+                    <Image
+                      src="/assets/2second.avif"
+                      alt="What We Do"
+                      width={2000}
+                      height={2000}
+                    />
+                  </div>
+                </Observer>
+                <Observer>
+                  <div className="basis-[41%] pr-[2%] opacity-0 transition-opacity delay-150 duration-[.9s]">
+                    <div className="m-auto xs:max-w-[79%]">
+                      <p
+                        style={{
                           fontSize: "calc(19px + 13*(100vw - 320px)/2180)",
-                        } as CSSProperties
-                      }
-                    >
-                      Instrument Named Among World&apos;s Most Innovative
-                      Companies in Design
-                    </p>
-                    <div className="mt-10 xs:mt-7 lg:mt-10">
-                      <LinkButton href="https://www.instrument.com/articles/instrument-named-among-most-innovative-companies-in-design">
-                        <span>Learn more</span>
-                      </LinkButton>
+                        }}
+                      >
+                        Instrument Named Among World&apos;s Most Innovative
+                        Companies in Design
+                      </p>
+                      <div className="mt-10 xs:mt-7 lg:mt-10">
+                        <LinkButton href="https://www.instrument.com/articles/instrument-named-among-most-innovative-companies-in-design">
+                          <span>Learn more</span>
+                        </LinkButton>
+                      </div>
                     </div>
                   </div>
-                </div>
+                </Observer>
               </div>
             </div>
           </div>
         </section>
         <section>
-          <header className="mx-auto mb-44 mt-32 max-w-[92%] xs:my-60 xs:max-w-[84%] xs:text-center md:max-w-[76%] lg:max-w-[68%] 2xl:max-w-[60%] 3xl:pb-9 3xl:pt-14">
-            <h2
-              className="leading-[100%]"
-              style={
-                {
+          <Observer>
+            <header className="mx-auto mb-44 mt-32 max-w-[92%] opacity-0 transition-opacity duration-[.9s] xs:my-60 xs:max-w-[84%] xs:text-center md:max-w-[76%] lg:max-w-[68%] 2xl:max-w-[60%] 3xl:pb-9 3xl:pt-14">
+              <h2
+                className="leading-[100%]"
+                style={{
                   fontSize: "calc(28px + 68*(100vw - 320px)/ 2180)",
-                } as CSSProperties
-              }
-            >
-              Explore some of our most recent work
-            </h2>
-            <div className="mt-7 xs:mt-10">
-              <LinkButton href="https://www.instrument.com/work">
-                <span>Our work</span>
-              </LinkButton>
-            </div>
-          </header>
+                }}
+              >
+                Explore some of our most recent work
+              </h2>
+              <div className="mt-7 xs:mt-10">
+                <LinkButton href="https://www.instrument.com/work">
+                  <span>Our work</span>
+                </LinkButton>
+              </div>
+            </header>
+          </Observer>
           <div>
             <div className="flex gap-16 max-lg:flex-col max-lg:gap-24 max-md:mx-[-5%] 3xl:gap-[5%]">
-              <div className="basis-1/2">
-                <Link href="https://www.instrument.com/work/eames-institute">
-                  <span className="w-full">
-                    <Image
-                      src="/assets/3third.avif"
-                      alt=""
-                      width={2000}
-                      height={2000}
-                    ></Image>
-                  </span>
-                  <span className="block gap-10 max-md:mx-[9%] max-md:max-w-[31.5rem] max-lg:md:flex max-3xl:lg:max-w-[31.5rem] 3xl:flex [&>*]:basis-1/2">
-                    <span
-                      className="mt-5 block font-['Whyte_Medium'] leading-[125%]"
-                      style={
-                        {
+              <Observer>
+                <div className="basis-1/2 opacity-0 transition-opacity duration-[.9s]">
+                  <Link href="https://www.instrument.com/work/eames-institute">
+                    <span className="w-full">
+                      <Image
+                        src="/assets/3third.avif"
+                        alt=""
+                        width={2000}
+                        height={2000}
+                      ></Image>
+                    </span>
+                    <span className="block gap-10 max-md:mx-[9%] max-md:max-w-[31.5rem] max-lg:md:flex max-3xl:lg:max-w-[31.5rem] 3xl:flex [&>*]:basis-1/2">
+                      <span
+                        className="mt-5 block font-['Whyte_Medium'] leading-[125%]"
+                        style={{
                           fontSize: "calc(19px + 13*(100vw - 320px)/ 2180)",
-                        } as CSSProperties
-                      }
-                    >
-                      Eames Institute
+                        }}
+                      >
+                        Eames Institute
+                      </span>
+                      <span className="mt-3 block pr-1 font-['Monument_Grotesk_Mono'] text-[0.875rem] leading-[1.5rem] md:max-lg:mt-5 3xl:mt-5">
+                        Ray and Charles Eames laid the foundation for modern
+                        design and created work that has transcended time. With
+                        an aspiration to bring the Eameses&apos; timeless
+                        methodologies to a modern audience, the Eames Institute
+                        enlisted Instrument to co-create a digital platform to
+                        unveil their vast collection to the world.
+                      </span>
                     </span>
-                    <span className="mt-3 block pr-1 font-['Monument_Grotesk_Mono'] text-[0.875rem] leading-[1.5rem] md:max-lg:mt-5 3xl:mt-5">
-                      Ray and Charles Eames laid the foundation for modern
-                      design and created work that has transcended time. With an
-                      aspiration to bring the Eameses&apos; timeless
-                      methodologies to a modern audience, the Eames Institute
-                      enlisted Instrument to co-create a digital platform to
-                      unveil their vast collection to the world.
+                  </Link>
+                </div>
+              </Observer>
+              <Observer>
+                <div className="basis-1/2 opacity-0 transition-opacity duration-[.9s]">
+                  <Link href="https://www.instrument.com/work/dropbox-award-submission">
+                    <span className="w-full">
+                      <Image
+                        src="/assets/4fourth.avif"
+                        alt=""
+                        width={2000}
+                        height={2000}
+                      ></Image>
                     </span>
-                  </span>
-                </Link>
-              </div>
-              <div className="basis-1/2">
-                <Link href="https://www.instrument.com/work/dropbox-award-submission">
-                  <span className="w-full">
-                    <Image
-                      src="/assets/4fourth.avif"
-                      alt=""
-                      width={2000}
-                      height={2000}
-                    ></Image>
-                  </span>
-                  <span className="block gap-10 max-md:mx-[9%] max-md:max-w-[31.5rem] max-lg:md:flex max-3xl:lg:max-w-[31.5rem] 3xl:flex [&>*]:basis-1/2">
-                    <span
-                      className="mt-5 block font-['Whyte_Medium'] leading-[125%]"
-                      style={
-                        {
+                    <span className="block gap-10 max-md:mx-[9%] max-md:max-w-[31.5rem] max-lg:md:flex max-3xl:lg:max-w-[31.5rem] 3xl:flex [&>*]:basis-1/2">
+                      <span
+                        className="mt-5 block font-['Whyte_Medium'] leading-[125%]"
+                        style={{
                           fontSize: "calc(19px + 13*(100vw - 320px)/ 2180)",
-                        } as CSSProperties
-                      }
-                    >
-                      Dropbox &quot;For All Things Worth Saving&quot;
+                        }}
+                      >
+                        Dropbox &quot;For All Things Worth Saving&quot;
+                      </span>
+                      <span className="mt-3 block pr-1 font-['Monument_Grotesk_Mono'] text-[0.875rem] leading-[1.5rem] md:max-lg:mt-5 3xl:mt-5">
+                        To evolve and mature how Dropbox engages with their
+                        customers, we developed a multi-year brand platform as
+                        well as launched its first campaign titled &apos;For All
+                        Things Worth Saving&apos; — an ecosystem of branded
+                        experiences aimed to remind people of the inherent value
+                        of their digital files.
+                      </span>
                     </span>
-                    <span className="mt-3 block pr-1 font-['Monument_Grotesk_Mono'] text-[0.875rem] leading-[1.5rem] md:max-lg:mt-5 3xl:mt-5">
-                      To evolve and mature how Dropbox engages with their
-                      customers, we developed a multi-year brand platform as
-                      well as launched its first campaign titled &apos;For All
-                      Things Worth Saving&apos; — an ecosystem of branded
-                      experiences aimed to remind people of the inherent value
-                      of their digital files.
-                    </span>
-                  </span>
-                </Link>
-              </div>
+                  </Link>
+                </div>
+              </Observer>
             </div>
           </div>
         </section>
@@ -376,23 +381,23 @@ const Home: NextPage = () => {
           </ul>
         </div>
         <div>
-          <div className="mx-auto mb-[5%] mt-7 max-w-[92%] pb-[10rem] xs:max-w-[84%] xs:text-center md:max-w-[76%] lg:max-w-[68%] 2xl:max-w-[60%]">
-            <p
-              className="leading-[100%]"
-              style={
-                {
+          <Observer>
+            <div className="mx-auto mb-[5%] mt-7 max-w-[92%] pb-[10rem] opacity-0 transition-opacity duration-[.9s] xs:max-w-[84%] xs:text-center md:max-w-[76%] lg:max-w-[68%] 2xl:max-w-[60%]">
+              <p
+                className="leading-[100%]"
+                style={{
                   fontSize: "calc(28px + 68*(100vw - 320px)/ 2180)",
-                } as CSSProperties
-              }
-            >
-              We&apos;d love to work with you and your team
-            </p>
-            <div className="mt-7 xs:mt-10">
-              <LinkButton href="https://www.instrument.com/contact">
-                <span>Get in touch</span>
-              </LinkButton>
+                }}
+              >
+                We&apos;d love to work with you and your team
+              </p>
+              <div className="mt-7 xs:mt-10">
+                <LinkButton href="https://www.instrument.com/contact">
+                  <span>Get in touch</span>
+                </LinkButton>
+              </div>
             </div>
-          </div>
+          </Observer>
         </div>
       </main>
       <Footer />

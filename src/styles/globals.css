@@ -16,7 +16,7 @@
 
 @font-face {
   font-family: "Whyte Medium";
-  src: url("../../public/fonts/Whyte/Whyte-Medium.ttf") format("truetype");
+  src: url("/fonts/Whyte/Whyte-Medium.ttf") format("truetype");
 }
 
 html {

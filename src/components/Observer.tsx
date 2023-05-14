@@ -1,11 +1,11 @@
-import { useEffect, useRef, type ReactNode } from "react";
+import { useEffect, useRef, ReactNode } from "react";
 
 interface ObserverProps {
   children: ReactNode;
 }
 
 export default function Observer({ children }: ObserverProps) {
-  const containerRef = useRef(null);
+  const containerRef = useRef<HTMLDivElement | null>(null);
   useEffect(() => {
     const observer = new IntersectionObserver((entries) => {
       entries.forEach((entry) => {
@@ -16,10 +16,15 @@ export default function Observer({ children }: ObserverProps) {
       });
     });
 
-    const elements = containerRef.current.children;
+    if (containerRef.current) {
+      const elements = containerRef.current.children;
 
-    for (let i = 0; i < elements.length; i++) {
-      observer.observe(elements[i]);
+      for (let i = 0; i < elements.length; i++) {
+        const element = elements[i] as Element;
+        if (element) {
+          observer.observe(element);
+        }
+      }
     }
   }, []);
 
